@@ -15,11 +15,11 @@ def fun():
 def fun2():
     return "Hey kalpak"
 
-
-
-
-if __name__== "__main__":
-    app.run(debug=True)
+@app.route("/three",methods=["POST"])
+def fun3():
+    value1 = int(request.form["value1"])
+    value2 = int(request.form["value2"])
+    return str(value1+value2)
 
 
 
